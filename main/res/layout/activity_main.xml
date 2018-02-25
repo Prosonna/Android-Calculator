@@ -1,0 +1,180 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#000011">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="My Calculator"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#663399"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="First Number"
+        android:id="@+id/textView2"
+        android:textSize="21dp"
+        android:textColor="#663399"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/fnumber"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:background="#111111"
+        android:textSize="25dp"
+        android:textColor="#008888" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Second Number (where neccessary)"
+        android:id="@+id/textView3"
+        android:textSize="21dp"
+        android:textColor="#663399"
+        android:layout_below="@+id/fnumber"
+        android:layout_alignStart="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/Snumber"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/fnumber"
+        android:background="#111111"
+        android:textSize="25dp"
+        android:textColor="#008888" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Snumber"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/btAdd"
+            android:background="#663399"
+            android:layout_margin="1dp"
+            android:textSize="22dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/btSub"
+            android:background="#663399"
+            android:layout_margin="1dp"
+            android:textSize="22dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:id="@+id/btMul"
+            android:background="#663399"
+            android:layout_margin="1dp"
+            android:textSize="22dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/btDiv"
+            android:background="#663399"
+            android:layout_margin="1dp"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remainder"
+            android:id="@+id/btRem"
+            android:background="#663399"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:id="@+id/btPercent"
+            android:background="#663399"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="^2"
+            android:id="@+id/btSquare"
+            android:background="#663399"
+            android:layout_margin="1dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Root"
+            android:id="@+id/btRoot"
+            android:background="#663399"
+            android:layout_margin="1dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Result:"
+        android:id="@+id/textView4"
+        android:textColor="#663399"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/result"
+        android:textColor="#008888"
+        android:background="#000011"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
